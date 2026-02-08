@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Risk Prediction</title>
+</head>
+<body>
+
+<h2>Credit Risk Prediction App</h2>
+
+<form method="POST">
+
+Age: <input type="number" name="age" value="30"><br><br>
+
+Sex:
+<select name="sex">
+    <option>Male</option>
+    <option>Female</option>
+</select><br><br>
+
+Job (0-3): <input type="number" name="job" value="1"><br><br>
+
+Housing:
+<select name="housing">
+    <option>own</option>
+    <option>rent</option>
+    <option>free</option>
+</select><br><br>
+
+Saving accounts:
+<select name="saving">
+    <option>little</option>
+    <option>moderate</option>
+    <option>rich</option>
+    <option>quite rich</option>
+</select><br><br>
+
+Checking account:
+<select name="checking">
+    <option>little</option>
+    <option>moderate</option>
+    <option>rich</option>
+    <option>quite rich</option>
+</select><br><br>
+
+Credit amount: <input type="number" name="credit_amount" value="1000"><br><br>
+
+Duration (months): <input type="number" name="duration" value="12"><br><br>
+
+<input type="submit" value="Predict">
+
+</form>
+
+{% if prediction %}
+<h3>Prediction: {{ prediction }}</h3>
+<h4>Confidence: {{ confidence }}%</h4>
+{% endif %}
+
+</body>
+</html>
